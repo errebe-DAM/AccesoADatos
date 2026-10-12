@@ -1,0 +1,9 @@
+**/old/**
+**/out/
+**/*.iml
+**/.git/
+**/.idea/
+**/*.pdf
+**/*.md
+*.zip
+Main.java
