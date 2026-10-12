@@ -4,6 +4,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class ReadFiles {
+
+  public static void countWord(String filePath, String word) {
+    int count = 0;
+    try {
+      BufferedReader br = new BufferedReader(new FileReader(filePath));
+
+      String line;
+      while ((line = br.readLine()) != null) {
+        if (line.contains(word)) {
+          count++;
+        }
+      }
+    } catch (IOException ioe) {
+      System.err.println("Error reading file: " + ioe.getMessage());
+    }
+    System.out.println(word + ": " + count);
+  }
+
   /*
    * Este metodo asume que el archivo es un txt simple con un campo y un valor por
    * cada linea.
