@@ -16,6 +16,7 @@ public class ReadFiles {
           count++;
         }
       }
+      br.close();
     } catch (IOException ioe) {
       System.err.println("Error reading file: " + ioe.getMessage());
     }
